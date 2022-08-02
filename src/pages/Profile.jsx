@@ -1,4 +1,4 @@
-import { toast } from "react-toastify";
+
 
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
@@ -94,7 +94,7 @@ const ProfileHouseEmpthy = styled.div`
 
 const Profile = () => {
   const navigate = useNavigate();
-  const { currentUser, loggedIn, checkingStatus } = useAuthStatus();
+  const { currentUser } = useAuthStatus();
 
   const [houses, setHouses] = useState(null);
   const [loading, setLoading] = useState(true);

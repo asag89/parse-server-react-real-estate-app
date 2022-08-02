@@ -119,7 +119,7 @@ const SignUp = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const createdUser = await Parse.User.signUp(email, password);
+      await Parse.User.signUp(email, password);
       navigate("/");
     } catch (error) {
       toast.error("Bad User Credentials");

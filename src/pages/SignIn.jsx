@@ -118,7 +118,7 @@ const SignIn = () => {
     e.preventDefault(e);
     setLoading(true);
     try {
-      const loggedInUser = await Parse.User.logIn(email, password);
+      await Parse.User.logIn(email, password);
       console.log(await Parse.User.current());
       navigate("/");
     } catch (error) {
